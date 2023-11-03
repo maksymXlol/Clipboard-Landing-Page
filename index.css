@@ -40,8 +40,9 @@ body {
 }
 
 header {
-  background-image: url(./images/bg-header-mobile.png);
+  background-image: url(./images/bg-header-desktop.png);
   background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 .div-img {
