@@ -6,8 +6,13 @@
   --light-grey-p: hsl(225, 4%, 78%);
 }
 
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 
 .conteiner {
@@ -30,29 +35,34 @@ body {
 
 .img-center {
   text-align: center;
+}
+
+.padding-top {
   padding-top: 3rem;
 }
 
 .p-text {
   color: var(--light-grey-p);
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 1.75;
 }
 
 header {
-  background-image: url(./images/bg-header-desktop.png);
+  background-image: url(./images/bg-header-mobile.png);
   background-repeat: no-repeat;
-  background-size: 100vw;
+  padding-block: 10.4rem;
 }
 
 .div-img {
   text-align: center;
-  padding-top: 7rem;
   padding-bottom: 2rem;
 }
 
 .header__p {
   padding-top: 0.3rem;
+  margin-bottom: 3.4rem;
+  margin-top: 1rem;
+  line-height: 1.7;
 }
 
 .div-btn {
@@ -60,31 +70,84 @@ header {
   flex-direction: column;
   font-weight: 400;
   font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.div-btn a {
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1.9rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .ios-btn {
-  color: white;
   background-color: var(--Strong-Cyan);
-  padding-block: 1rem;
-  border-radius: 1.9rem;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 2.5rem;
 }
 
 .mac-btn {
-  color: white;
   background-color: var(--Light-Blue);
-  padding-block: 1rem;
-  border-radius: 1.9rem;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url(./images/bg-header-desktop.png);
+  }
+  .main-title {
+    font-size: 3rem;
+  }
+  .header__p {
+    font-size: 1.4rem;
+    margin-inline: auto;
+    max-width: 50rem;
+  }
+
+  .div-btn {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .feature1 img {
   padding-top: 4.3rem;
   padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature1 {
+    position: relative;
+    padding-bottom: 10rem;
+  }
+
+  .feature1-info {
+    padding-bottom: 4.6rem;
+  }
+
+  .feature1-side-text {
+    padding: 6.8rem;
+    max-width: 50%;
+    margin-left: auto;
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .feature1-title {
+    font-size: 1.6rem;
+  }
+
+  .feature1-p {
+    /* font-size: 1.2rem; */
+    margin-inline: auto;
+    max-width: 50rem;
+  }
+
+  .feature1 img {
+    position: absolute;
+    right: 50%;
+  }
 }
 
 .feature2-title {
@@ -101,4 +164,34 @@ header {
   gap: 5rem;
   align-items: center;
   padding-top: 9rem;
+}
+
+.download-info .title {
+  padding-top: 11rem;
+}
+
+footer {
+  background-color: hsl(240, 20%, 96%);
+  margin-top: 10rem;
+}
+
+.footer-info {
+  align-items: center;
+  gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  color: var(--grey-title);
+  font-size: 0.9rem;
+}
+
+footer .logo-footer {
+  padding-top: 3rem;
+}
+
+.footer-logos {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  padding-block: 3rem;
 }
